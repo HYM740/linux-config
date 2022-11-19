@@ -1,2 +1,3 @@
 # linux-config
-Linux相关的配置文件、脚本
+
+存放 Linux相关的配置文件、脚本
