@@ -1,3 +1,4 @@
+# 使用DHCP自动获取地址
 [Match]
 Name=ens*
 Name=eth*

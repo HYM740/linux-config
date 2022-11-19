@@ -10,7 +10,7 @@
 # possible, but leave them commented.  Uncommented options override the
 # default value.
 
-Port 17022
+Port 17022 # 设置SSH端口号为 17022
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
@@ -24,21 +24,21 @@ Port 17022
 
 # Logging
 #SyslogFacility AUTH
-LogLevel INFO
+LogLevel INFO # 设置日志级别为INFO
 
 # Authentication:
 
-LoginGraceTime 1m
+LoginGraceTime 1m # 设置登录超时时间为1分钟
 #PermitRootLogin prohibit-password
-StrictModes yes
+StrictModes yes # 启用检查文件夹模式和所有权
 #MaxAuthTries 6
 #MaxSessions 10
 
-PubkeyAuthentication yes
+PubkeyAuthentication yes # 启用公钥登录
 
 # The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
 # but this is overridden so installations will only check .ssh/authorized_keys
-AuthorizedKeysFile	.ssh/authorized_keys
+AuthorizedKeysFile	.ssh/authorized_keys # 设置密钥文件位置
 
 #AuthorizedPrincipalsFile none
 
@@ -54,8 +54,8 @@ AuthorizedKeysFile	.ssh/authorized_keys
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-PasswordAuthentication yes
-PermitEmptyPasswords no
+PasswordAuthentication yes # 允许密码认证
+PermitEmptyPasswords no # 拒绝空密码登录
 
 # Change to no to disable s/key passwords
 KbdInteractiveAuthentication no
@@ -79,7 +79,7 @@ KbdInteractiveAuthentication no
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and KbdInteractiveAuthentication to 'no'.
-UsePAM yes
+UsePAM yes # 使用PAM模块
 
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
@@ -88,9 +88,9 @@ UsePAM yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
-PrintMotd no
+PrintMotd no # 登陆时不显示 /etc/motd
 #PrintLastLog yes
-TCPKeepAlive yes
+TCPKeepAlive yes # 发送TCP保活探测
 #PermitUserEnvironment no
 #Compression delayed
 #ClientAliveInterval 0
@@ -106,7 +106,7 @@ TCPKeepAlive yes
 #Banner none
 
 # override default of no subsystems
-Subsystem	sftp	/usr/lib/ssh/sftp-server
+Subsystem	sftp	/usr/lib/ssh/sftp-server # 启用SFTP
 
 # Example of overriding settings on a per-user basis
 #Match User anoncvs
